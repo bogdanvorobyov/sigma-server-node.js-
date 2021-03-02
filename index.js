@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const config = require ("config"); 
 const authRouter = require('./routes/auth.routes')
-const homeRouter = require('./routes/home.routes')
 const app = express()
 const PORT = process.env.PORT || config.get('serverPort')
 const corsMiddleware = require('./middleware/cors.middleware')
@@ -12,15 +11,13 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-// app.use(corsMiddleware)
+app.use(corsMiddleware)
 
-// app.use(express.static('static'))
 app.use(express.json())
 app. get('/',(req,res) =>{ 
     res.send("Welcome to the home page")
 })
 app.use('/api/auth', authRouter)
-// app.use('/api/information', homeRouter)
 
 const start = async () => { 
     try{ 
