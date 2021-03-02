@@ -1,0 +1,5 @@
+{ 
+    "serverPort": 5000, 
+    "dbURL" : "mongodb+srv://Bogdan:23016459b@sigmatask.wbmkw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 
+    "secretKey": "bgdn-sectet-key-today"
+}
