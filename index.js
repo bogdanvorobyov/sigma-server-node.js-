@@ -7,12 +7,12 @@ const app = express()
 const PORT = process.env.PORT || config.get('serverPort')
 const corsMiddleware = require('./middleware/cors.middleware')
 
-// mongoose.set('useNewUrlParser', true);
-// mongoose.set('useFindAndModify', false);
-// mongoose.set('useCreateIndex', true);
-// mongoose.set('useUnifiedTopology', true);
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
 
-// app.use(corsMiddleware)
+app.use(corsMiddleware)
 // app.use(express.static('static'))
 app.use(express.json())
 app.use('/api/auth', authRouter)
