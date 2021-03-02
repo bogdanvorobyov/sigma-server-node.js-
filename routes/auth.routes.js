@@ -160,7 +160,7 @@ async (req, res) =>{
                 email: teacher.email,
                 name:teacher.name,
                 course: teacher.course,
-                cathedra: teacher.group
+                cathedra: teacher.cathedra
             }
             return res.json({
                 user:{
@@ -220,7 +220,7 @@ router.get('/auth', authMiddleware,
                     email: teacher.email,
                     name:teacher.name,
                     course: teacher.course,
-                    cathedra: teacher.group
+                    cathedra: teacher.cathedra
                 }
                 return res.json({
                     user:{
