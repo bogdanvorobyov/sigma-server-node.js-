@@ -13,8 +13,12 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
 app.use(corsMiddleware)
+
 // app.use(express.static('static'))
 app.use(express.json())
+app. get('/',(req,res) =>{ 
+    res.send("Welcome to the home page")
+})
 app.use('/api/auth', authRouter)
 // app.use('/api/information', homeRouter)
 
