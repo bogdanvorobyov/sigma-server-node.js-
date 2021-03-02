@@ -12,7 +12,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-app.use(corsMiddleware)
+// app.use(corsMiddleware)
 
 // app.use(express.static('static'))
 app.use(express.json())
